@@ -1,3 +1,5 @@
+package lauramititelu.aplicatiicursuri.java11OO;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -12,8 +14,10 @@ public final class FlightDataRecorder {
     }
 
     public static void listLog(){
-        for(Entry e : entries)
+        for(Entry e : entries){
             System.out.println(e.toString());
+        }
+
     }
 
     private static class Entry{
