@@ -5,11 +5,6 @@ import java.util.List;
 
 public final class FlightDataRecorder {
 
-    //Creare Singleton
-
-    //private static final FlightDataRecorder flightDataRecorder;
-
-
     private FlightDataRecorder(){
 
     }
