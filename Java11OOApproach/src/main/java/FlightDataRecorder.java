@@ -5,10 +5,6 @@ import java.util.List;
 
 public final class FlightDataRecorder {
 
-    private FlightDataRecorder(){
-
-    }
-
     private static final List<Entry> entries = new ArrayList<>();
 
     public static void log(String msg){
