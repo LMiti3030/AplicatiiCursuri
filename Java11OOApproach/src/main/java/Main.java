@@ -17,22 +17,36 @@ public class Main {
 //        parisToLondon.print();
 //    }
 
-    public static void main (String[] args) throws InterruptedException{
-        RadarTarget os791 = new RadarTarget(
-                "OS791",
-                280,
-                "B737-800"
-        );
-        System.out.println(os791.getLabel());
-        System.out.println();
+//    Testare RadarTarget
+//    public static void main (String[] args) throws InterruptedException{
+//        RadarTarget os791 = new RadarTarget(
+//                "OS791",
+//                280,
+//                "B737-800"
+//        );
+//        System.out.println(os791.getLabel());
+//        System.out.println();
+//
+//        //change altitude label
+//        os791.changeAltitude(200);
+//
+//        //keep detecting target tp see command executed
+//        for(int i=0; i<5; i++){
+//            Thread.sleep(1000);
+//            System.out.println(os791.getLabel());
+//            System.out.println();
+//        }
+//
+//    }
 
-        os791.changeAltitude(200);
+//    Testare FlightDataRecorder
+    public static void main(String[] args) throws InterruptedException{
+        FlightDataRecorder.log("Primul mesaj");
         for(int i=0; i<5; i++){
             Thread.sleep(1000);
-            System.out.println(os791.getLabel());
-            System.out.println();
-        }
-
+            FlightDataRecorder.log("Mesaj la momentul " + i);
+          }
+        FlightDataRecorder.listLog();
     }
 
 }
