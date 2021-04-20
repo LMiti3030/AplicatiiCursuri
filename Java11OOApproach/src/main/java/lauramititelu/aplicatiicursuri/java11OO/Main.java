@@ -1,6 +1,7 @@
 package lauramititelu.aplicatiicursuri.java11OO;
 
 
+import java.util.List;
 
 public class Main {
 
@@ -50,22 +51,41 @@ public class Main {
 //    }
 
 //    Testare ConversionHelper
+//    public static void main(String[] args) {
+//        int altitudeInFeet = 28_000;
+//        double distInNm = 10;
+//
+//        int altitudeInFl = ConversionHelper.fromFeetToFL(300);
+//        System.out.println(altitudeInFeet + " ft -> FL " + altitudeInFl);
+//        //fl= flylevel
+//        //nm = nautical mile
+//
+//        double distInMeters = ConversionHelper.fromNmToMeters(10);
+//        System.out.println(distInNm+ " Nm -> " + distInMeters + " m");
+//
+//        Calculators.Distance d = new Calculators.Distance(1, 1, 3,3);
+//        System.out.println(String.format("Distance is %.2f ", d.calculate()));
+//
+//    }
+
+
+//    Testare LatLon, Route, Shape si Waypoint
     public static void main(String[] args) {
-        int altitudeInFeet = 28_000;
-        double distInNm = 10;
+        //Create an airspace
+        List<Shape> airspace = List.of(
+                new Waypoint(" CREOL", new LatLon(20.3, 40.7)),
+                new Waypoint("ZIDCO", new LatLon(87.1, 20.7)),
+                new Waypoint("RYTHM", new LatLon(44.5, 23.2)),
+                new Route("ROUTE1",
+                        new LatLon(41.3, 2.3),
+                        new LatLon(41.5, 2.4),
+                        new LatLon(41.7, 2.7))
+        );
 
-        int altitudeInFl = ConversionHelper.fromFeetToFL(300);
-        System.out.println(altitudeInFeet + " ft -> FL " + altitudeInFl);
-        //fl= flylevel
-        //nm = nautical mile
-
-        double distInMeters = ConversionHelper.fromNmToMeters(10);
-        System.out.println(distInNm+ " Nm -> " + distInMeters + " m");
-
-        Calculators.Distance d = new Calculators.Distance(1, 1, 3,3);
-        System.out.println(String.format("Distance is %.2f ", d.calculate()));
+        //print wkt for drawing on screen
+        airspace.forEach( s -> {
+            System.out.println(s.toWkt());
+        });
 
     }
-
-
 }
