@@ -1,4 +1,4 @@
-package lauramititelu.aplicatiicursuri.java11OO.enumdemo;
+package lauramititelu.aplicatiicursuri.java11OO.lambdademo;
 
 public enum WakeTurbulence {
     LIGHT(60),

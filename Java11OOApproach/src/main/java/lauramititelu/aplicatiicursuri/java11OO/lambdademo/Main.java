@@ -1,8 +1,9 @@
-package lauramititelu.aplicatiicursuri.java11OO.enumdemo;
+package lauramititelu.aplicatiicursuri.java11OO.lambdademo;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import static lauramititelu.aplicatiicursuri.java11OO.enumdemo.WakeTurbulence.*;
+
+import static lauramititelu.aplicatiicursuri.java11OO.lambdademo.WakeTurbulence.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,12 +26,20 @@ public class Main {
 //        }
 
         //Without TakeOffDistancingRules and with Enums with properties
+//        int offset = 0;
+//        for (Aircraft a: aircraft){
+//            offset +=a.getWakeTurbulence().getTimeOffset();
+//            LocalDateTime depTime = LocalDateTime.now().plusSeconds(offset);
+//            System.out.println("Aircraft " +  a.getModeADecimal() + " takes off at " + depTime.toLocalTime());
+//        }
+
+
+        //With InnerClass in Aircraft
         int offset = 0;
         for (Aircraft a: aircraft){
             offset +=a.getWakeTurbulence().getTimeOffset();
             LocalDateTime depTime = LocalDateTime.now().plusSeconds(offset);
-            System.out.println("Aircraft " +  a.getModeADecimal() + " takes off at " + depTime.toLocalTime());
+            System.out.println("Aircraft " +  a.getModeAOctal() + " takes off at " + depTime.toLocalTime());
         }
-
     }
 }
