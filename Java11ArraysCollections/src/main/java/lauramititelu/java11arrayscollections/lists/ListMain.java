@@ -14,6 +14,11 @@ public class ListMain {
 
         //linkedList();
 
+        sortList();
+
+    }
+
+    private static void sortList() {
         List numberList = new ArrayList();
         numberList.add(10);
         numberList.add(5);
@@ -24,7 +29,6 @@ public class ListMain {
         System.out.println(numberList);
         Collections.sort(numberList);
         System.out.println(numberList);
-
     }
 
     private static void linkedList() {
