@@ -1,5 +1,7 @@
 package lauramititelu.java11arrayscollections.lists;
 
+import javax.imageio.stream.MemoryCacheImageOutputStream;
+
 public class Mountain implements Comparable<Mountain> {
     private String name;
     private int height;
@@ -34,5 +36,12 @@ public class Mountain implements Comparable<Mountain> {
     @Override
     public String toString() {
         return name + "-" + height + "m";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Mountain && ((Mountain)obj).getName() == name && ((Mountain)obj).getHeight() == height)
+            return true;
+        return false;
     }
 }

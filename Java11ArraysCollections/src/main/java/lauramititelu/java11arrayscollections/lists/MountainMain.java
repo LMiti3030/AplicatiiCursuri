@@ -11,6 +11,11 @@ public class MountainMain {
     public static void main(String[] args) {
         joacaLaura();
 
+        //customSortedList();
+
+    }
+
+    private static void customSortedList() {
         List<Mountain> mountains = new ArrayList<>();
         mountains.add(new Mountain("Everest", 8848));
         mountains.add(new Mountain("Matterhorn", 4478));
@@ -37,7 +42,6 @@ public class MountainMain {
         System.out.println(mountains.stream().
                 map(Mountain::getName).
                 collect(Collectors.toList()));
-
     }
 
     private static void joacaLaura() {
@@ -57,6 +61,9 @@ public class MountainMain {
 //        System.out.println(muntiRo);
 
         System.out.println(Collections.binarySearch(muntiRo, omu));
+
+
+        System.out.println(muntiRo.get(0).equals(moldoveanu));
 
     }
 }
